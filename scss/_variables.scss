@@ -6,3 +6,11 @@ $bodyColor:      #333333;
 $breakpointSm:   600px;
 $breakpointMd:   900px;
 $breakpointLg:   1200px;
+
+// Slider
+$sliderAspectRatio:    2 / 3 !default;
+$sliderHeights:        (
+  sm:                    12rem,
+  md:                    18rem,
+  lg:                    24rem
+) !default;

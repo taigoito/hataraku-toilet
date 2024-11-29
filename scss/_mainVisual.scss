@@ -4,7 +4,7 @@
 
 .mainVisual {
   padding-bottom: min(5.76vw, 3rem); // badgeはみ出し分と等しく
-  background: linear-gradient(#ccffff 0%, #ccffff 60%, #4c45c2 60%, #4c45c2 100%);
+  background: linear-gradient(#ccedf9 0%, #ccedf9 60%, #4c45c2 60%, #4c45c2 100%);
 
   &__image {
     @extend %__inner;
