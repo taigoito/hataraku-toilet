@@ -62,7 +62,7 @@ button, input, select, textarea {
   padding: 3rem 0;
 }
 
-.feature__inner, .movie iframe, .mainVisual__badges, .mainVisual__image, .header__primaryMenu, .header__inner {
+.comicomikakaku__inner, .contactButtons__inner, .feature__inner, .movie iframe, .mainVisual__badges, .mainVisual__image, .header__primaryMenu, .header__inner {
   width: min(100%, 63rem);
   margin: auto;
   padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
@@ -415,4 +415,63 @@ button, input, select, textarea {
 }
 .slider__navItem:not(.--current) {
   background-color: #fff;
+}
+
+/*
+ * Contact Buttons
+ */
+.contactButtons__inner {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 600px) {
+  .contactButtons__inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.contactButtons__button {
+  display: block;
+  height: 7.5rem;
+  margin: 1.5rem auto;
+}
+@media (min-width: 600px) {
+  .contactButtons__button {
+    flex: 1 1 10.5rem;
+  }
+}
+.contactButtons__button.--line {
+  background: url("./assets/images/line.png") no-repeat 50% 50%/contain scroll;
+}
+.contactButtons__button.--line:hover {
+  background-image: url("./assets/images/line_mo.png");
+}
+.contactButtons__button.--mitsumori {
+  background: url("./assets/images/mitsumori.png") no-repeat 50% 50%/contain scroll;
+}
+.contactButtons__button.--mitsumori:hover {
+  background-image: url("./assets/images/mitsumori_mo.png");
+}
+.contactButtons__button.--raiten {
+  background: url("./assets/images/raiten.png") no-repeat 50% 50%/contain scroll;
+}
+.contactButtons__button.--raiten:hover {
+  background-image: url("./assets/images/raiten_mo.png");
+}
+
+/*
+ * Comicomi Kakaku
+ */
+.comicomikakaku {
+  background-color: #08186e;
+}
+.comicomikakaku__inner {
+  padding-bottom: 3rem;
+}
+@media (min-width: 600px) {
+  .comicomikakaku__inner {
+    padding-top: 3rem;
+  }
 }
