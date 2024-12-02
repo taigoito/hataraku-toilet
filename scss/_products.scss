@@ -29,13 +29,13 @@
 
     a {
       display: block;
-      padding: min(2vw, 1.25rem);
+      padding: 1.25rem 0;
       border-radius: 0.25rem;
       background-color: #4c45c2;
       box-shadow: 0 0.375rem 0 0 #08186e;
       color: #ffffff;
       font-weight: 700;
-      font-size: min(2vw, 1.25rem);
+      font-size: 1.25rem;
       line-height: 1.2;
       text-align: center;
 
@@ -48,12 +48,12 @@
 
   &__subheading {
     display: block;
-      padding: min(2vw, 1.25rem);
+      padding: 1.25rem 0;
       border-radius: 0.25rem;
       background-color: #4c45c2;
       color: #ffffff;
       font-weight: 700;
-      font-size: min(2vw, 1.25rem);
+      font-size: 1.25rem;
       line-height: 1.2;
       text-align: center;
   }

@@ -58,33 +58,34 @@ button, input, select, textarea {
 /*
  * Section
  */
-.products, .review, .feature {
+.works, .flow, .products, .review, .feature {
   padding: 3rem 0;
 }
 
-.products__inner, .comicomikakaku__inner, .contactButtons__inner, .feature__inner, .movie iframe, .mainVisual__badges, .mainVisual__image, .header__primaryMenu, .header__inner {
+.works__inner, .flow__inner, .products__inner, .comicomikakaku__inner, .contactButtons__inner, .feature__inner, .movie iframe, .mainVisual__badges, .mainVisual__image, .header__primaryMenu, .header__inner {
   width: min(100%, 63rem);
   margin: auto;
   padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
 }
 
-.products__heading, .feature__heading {
+.flow__heading, .products__heading, .feature__heading {
   position: relative;
+  margin: 2.25rem 0 3rem;
   color: #08186e;
   font-weight: 700;
-  font-size: min(4.8vw, 3rem);
+  font-size: min(7.2vw, 3rem);
   line-height: 1.44;
   text-align: center;
 }
-.products__heading::after, .feature__heading::after {
+.flow__heading::after, .products__heading::after, .feature__heading::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: calc(100% + 0.5rem);
   left: 0;
   right: 0;
   display: block;
-  width: min(12vw, 7.5rem);
-  height: min(0.8vw, 0.5rem);
+  width: min(18vw, 7.5rem);
+  height: min(1.2vw, 0.5rem);
   margin: auto;
   background-color: #fa6400;
 }
@@ -494,13 +495,13 @@ button, input, select, textarea {
 }
 .products__menuItem a {
   display: block;
-  padding: min(2vw, 1.25rem);
+  padding: 1.25rem 0;
   border-radius: 0.25rem;
   background-color: #4c45c2;
   box-shadow: 0 0.375rem 0 0 #08186e;
   color: #ffffff;
   font-weight: 700;
-  font-size: min(2vw, 1.25rem);
+  font-size: 1.25rem;
   line-height: 1.2;
   text-align: center;
 }
@@ -510,12 +511,12 @@ button, input, select, textarea {
 }
 .products__subheading {
   display: block;
-  padding: min(2vw, 1.25rem);
+  padding: 1.25rem 0;
   border-radius: 0.25rem;
   background-color: #4c45c2;
   color: #ffffff;
   font-weight: 700;
-  font-size: min(2vw, 1.25rem);
+  font-size: 1.25rem;
   line-height: 1.2;
   text-align: center;
 }
@@ -643,4 +644,112 @@ button, input, select, textarea {
   color: #ffffff;
   font-size: 0.75rem;
   text-align: center;
+}
+
+/*
+ * Flow
+ */
+.flow {
+  background-color: #fa6400;
+}
+.flow__heading {
+  color: #ffffff;
+}
+.flow__heading::after {
+  background-color: #ffffff;
+}
+.flow__desc {
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.flow__desc span {
+  display: inline-block;
+}
+
+/*
+ * Works
+ */
+.works__heading {
+  border-top: 1.5rem solid #fff104;
+  border-bottom: 1.5rem solid #fff104;
+  border-radius: 0.25rem;
+  color: #08186e;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.works__cases {
+  list-style: none;
+  padding: 0;
+}
+@media (min-width: 750px) {
+  .works__cases {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+  }
+}
+.works__case {
+  margin-bottom: 0.75rem;
+  border: 1px solid #bababa;
+  border-radius: 0.375rem;
+}
+@media (min-width: 750px) {
+  .works__case {
+    flex: 0 1 49%;
+  }
+}
+.works__caseHeader {
+  padding: 1.25rem;
+  background-color: #ededed;
+}
+.works__caseSample {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.works__caseBody {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+.works__caseImage {
+  display: block;
+  flex: 0 1 12rem;
+}
+.works__caseContent {
+  flex: 0 1 auto;
+}
+.works__caseDate {
+  margin-bottom: 0.375rem;
+  font-size: 0.75rem;
+}
+.works__caseName {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.works__caseDesc {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+.works__casePrice {
+  margin-left: 3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.works__casePriceMain {
+  color: #d80000;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 300%;
 }
