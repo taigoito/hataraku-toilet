@@ -28,7 +28,7 @@
     margin: 0;
     padding: 0;
 
-    @media (min-width: $breakpointMd) {
+    @media (min-width: $breakpointLg) {
       display: flex;
     }
   }
@@ -70,7 +70,7 @@
     display: none;
     flex: 0 1 13.5rem;
 
-    @media (min-width: $breakpointMd) {
+    @media (min-width: $breakpointLg) {
       display: block;
     }
   }
@@ -87,7 +87,7 @@
     align-items: center;
     padding: 0; // 打消し
 
-    @media (min-width: $breakpointMd) {
+    @media (min-width: $breakpointLg) {
       display: flex;
     }
   }
