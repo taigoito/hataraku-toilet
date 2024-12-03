@@ -9,7 +9,7 @@
     @extend %__inner;
     padding-bottom: 3rem;
 
-    @media (min-width: $breakpointSm) {
+    @media (min-width: $breakpointMd) {
       padding-top: 3rem;
     }
   }

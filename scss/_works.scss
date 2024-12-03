@@ -10,6 +10,8 @@
   }
 
   &__heading {
+    width: min(100%, 31.5rem);
+    margin: 1.5rem auto;
     border-top: 1.5rem solid #fff104;
     border-bottom: 1.5rem solid #fff104;
     border-radius: 0.25rem;
@@ -18,10 +20,16 @@
     font-size: 1.75rem;
     line-height: 1.2;
     text-align: center;
+
+    @media (min-width: $breakpointMd) {
+      width: 100%;
+    }
   }
 
   &__cases {
     list-style: none;
+    width: min(100%, 31.5rem);
+    margin: 1.5rem auto;
     padding: 0;
 
     @media (min-width: $breakpointMd) { 
@@ -30,6 +38,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 2%;
+      width: 100%;
     }
   }
 

@@ -8,7 +8,7 @@
   height: calc(83.33vmin * #{$sliderAspectRatio});
   overflow: hidden;
 
-  @media (min-width: $breakpointSm) {
+  @media (min-width: $breakpointMd) {
     @each $key, $height in $sliderHeights {
       &.--#{$key} {
         height: $height;
@@ -44,7 +44,7 @@
       object-fit: cover;
       margin: 0;
 
-      @media (min-width: $breakpointSm) {
+      @media (min-width: $breakpointMd) {
         @each $key, $height in $sliderHeights {
           @at-root .slider.--#{$key} .slider__item img {
             width: auto;
