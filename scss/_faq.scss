@@ -21,14 +21,14 @@
   }
 
   &__table {
-    border-bottom: 1px solid #bdbdbd;
+    width: 100%;
     font-size: 0.75rem;
 
     @media (min-width: $breakpointMd) {
       font-size: 1rem;
     }
 
-    tr:nth-child(1) {
+    tr:nth-child(2n-1) {
       th {
         padding-top: 0.75rem;
         padding-right: 1.5rem;
@@ -45,7 +45,9 @@
       }
     }
 
-    tr:nth-child(2) {
+    tr:nth-child(2n) {
+      border-bottom: 1px solid #bdbdbd;
+      
       th {
         padding-right: 1.5rem;
         padding-bottom: 1.5rem;

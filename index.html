@@ -126,10 +126,10 @@
         <div class="products__inner">
           <h2 class="products__heading">商品一覧</h2>
           <ul class="products__menu">
-            <li class="products__menuItem"><a href="#">トイレリフォーム</a></li>
-            <li class="products__menuItem"><a href="#">ウォッシュレット</a></li>
+            <li class="products__menuItem"><a href="#cat1">トイレリフォーム</a></li>
+            <li class="products__menuItem"><a href="#cat2">ウォッシュレット</a></li>
           </ul>
-          <h3 class="products__subheading">トイレリフォーム</h3>
+          <h3 id="cat1" class="products__subheading">トイレリフォーム</h3>
           <ul class="products__list">
             <li class="products__listItem" v-for="product in products">
               <div class="products__itemHeader">
@@ -160,7 +160,7 @@
               </div>
             </li>
           </ul>
-          <h3 class="products__subheading">ウォッシュレット</h3>
+          <h3 id="cat2" class="products__subheading">ウォッシュレット</h3>
           <ul class="products__list">
             <li class="products__listItem" v-for="product in products">
               <div class="products__itemHeader">
@@ -289,16 +289,10 @@
           <table class="faq__table">
             <tr><th>Q</th><td>急に故障したので、急ぎで取り付けたいのですが・・・</td></tr>
             <tr><th>A</th><td>はい、状況によって可能です。最短当日にお伺いして現場を確認させて頂き、在庫があるものでしたら当日に対応可能な場合もあります。故障の原因をしっかり調査しないと、また同じように故障する可能性もありますので、なるべくお時間に余裕をもってご連絡されることをお勧めします。</td></tr>
-          </table>
-          <table class="faq__table">
             <tr><th>Q</th><td>工事はどのくらいで終わりますか？</td></tr>
             <tr><th>A</th><td>工事日当日は、約2時間~3時間を目安に工事完了となります。</td></tr>
-          </table>
-          <table class="faq__table">
             <tr><th>Q</th><td>問合せや相談後、しつこく営業されませんか？</td></tr>
             <tr><th>A</th><td>ご安心ください。強引な営業などはいたしません。当店は、お客様がやって良かったと心から思ってもらえることをモットーとしているので、お気軽にご相談ください。</td></tr>
-          </table>
-          <table class="faq__table">
             <tr><th>Q</th><td>施工後のフォローはありますか？</td></tr>
             <tr><th>A</th><td>はい、ございます。当店は、50年以上福井市に根付いて営業させて頂いています。地域の皆様に信頼いただくことがとても大切なことです。施工して終わりという業者とは違います。何か不調なことがあれば飛んで対応に伺いますので、安心してご相談くださいませ。</td></tr>
           </table>

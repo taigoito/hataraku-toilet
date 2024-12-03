@@ -10,6 +10,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 599.9px) {
   html {
@@ -796,7 +797,7 @@ button, input, select, textarea {
   text-align: center;
 }
 .faq__table {
-  border-bottom: 1px solid #bdbdbd;
+  width: 100%;
   font-size: 0.75rem;
 }
 @media (min-width: 750px) {
@@ -804,7 +805,7 @@ button, input, select, textarea {
     font-size: 1rem;
   }
 }
-.faq__table tr:nth-child(1) th {
+.faq__table tr:nth-child(2n-1) th {
   padding-top: 0.75rem;
   padding-right: 1.5rem;
   color: #08186e;
@@ -813,11 +814,14 @@ button, input, select, textarea {
   text-align: center;
   vertical-align: baseline;
 }
-.faq__table tr:nth-child(1) td {
+.faq__table tr:nth-child(2n-1) td {
   padding-top: 0.75rem;
   font-size: 150%;
 }
-.faq__table tr:nth-child(2) th {
+.faq__table tr:nth-child(2n) {
+  border-bottom: 1px solid #bdbdbd;
+}
+.faq__table tr:nth-child(2n) th {
   padding-right: 1.5rem;
   padding-bottom: 1.5rem;
   color: #b5bad3;
@@ -826,7 +830,7 @@ button, input, select, textarea {
   text-align: center;
   vertical-align: baseline;
 }
-.faq__table tr:nth-child(2) td {
+.faq__table tr:nth-child(2n) td {
   padding-bottom: 1.5rem;
   font-size: 100%;
 }
