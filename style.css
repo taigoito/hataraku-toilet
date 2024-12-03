@@ -60,7 +60,12 @@ button, input, select, textarea {
  * Section
  */
 .contact, .showroom, .faq, .works, .flow, .products, .review, .feature {
-  padding: 3rem 0;
+  padding: 1.5rem 0;
+}
+@media (min-width: 750px) {
+  .contact, .showroom, .faq, .works, .flow, .products, .review, .feature {
+    padding: 3rem 0;
+  }
 }
 
 .contact__inner, .showroom__inner, .faq__inner, .works__inner, .flow__inner, .products__inner, .comicomikakaku__inner, .contactButtons__inner, .feature__inner, .movie iframe, .mainVisual__badges, .mainVisual__image, .header__primaryMenu, .header__inner {
@@ -439,8 +444,12 @@ button, input, select, textarea {
  * Movie
  */
 .movie {
-  padding: 6rem 0;
   background-color: #08186e;
+}
+@media (min-width: 750px) {
+  .movie {
+    padding: 6rem 0;
+  }
 }
 .movie iframe {
   display: block;
@@ -871,6 +880,7 @@ button, input, select, textarea {
   background-color: #fa6400;
 }
 .flow__heading {
+  margin-top: 0;
   color: #ffffff;
 }
 .flow__heading::after {

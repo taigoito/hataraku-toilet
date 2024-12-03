@@ -3,8 +3,11 @@
  */
 
 .movie {
-  padding: 6rem 0;
   background-color: #08186e;
+
+  @media (min-width: $breakpointMd) {
+    padding: 6rem 0;
+  }
 
   iframe {
     @extend %__inner;

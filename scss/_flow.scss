@@ -12,6 +12,7 @@
 
   &__heading {
     @extend %__heading;
+    margin-top: 0;
     color: #ffffff;
 
     &::after {
