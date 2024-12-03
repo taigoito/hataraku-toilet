@@ -316,7 +316,68 @@
           <iframe class="showroom__access" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12899.738011489238!2d136.1968056!3d36.0707016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8bf1ee5be0b8d%3A0xf37aa1a1e0a09703!2z6KW_6YOo54eD5paZKOagqik!5e0!3m2!1sja!2sjp!4v1733189350188!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
+      <section id="contact" class="contact">
+        <div class="contact__header">
+          <h2 class="contact__heading">トイレリフォームの<br>お問い合わせ</h2>
+          <div class="contact__headerInner"></div>
+        </div>
+        <div class="contact__inner">
+          <form class="contact__form h-adr" method="post" action="./php/mail.php">
+            <input type="hidden" class="p-country-name" value="Japan">
+            <div class="contact__formTable">
+              <dl>
+                <dt><label for="yoursubject"><span class="required">必須</span>お問い合わせ内容</label></dt>
+                <dd>
+                  <select id="yoursubject" class="control --md" name="お問い合わせ内容">
+                    <option value="トイレ関連の無料お見積もり">トイレ関連の無料お見積もり</option>
+                    <option value="ご相談">ご相談</option>
+                    <option value="その他">その他</option>
+                  </select>
+                  <p class="contact__note">※他の箇所をご希望の方は、下の自由記入欄にご記入ください。</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt><label for="yourname"><span class="required">必須</span>お名前</label></dt>
+                <dd><input id="yourname" class="control --md" size="30" type="text" name="お名前">例） はた楽 太郎</dd>
+              </dl>
+              <dl>
+                <dt><label for="yourtel"><span class="required">必須</span>電話番号</label></dt>
+                <dd><input id="yourtel" class="control --md" size="30" type="tel" name="電話番号">例） 0776001111</dd>
+              </dl>
+              <dl>
+                <dt><label for="youremail"><span class="required">必須</span>メールアドレス</label></dt>
+                <dd><input id="youremail" class="control --lg" size="30" type="email" name="Email"></dd>
+              </dl>
+              <dl>
+                <dt><label for="yourpostalcode">郵便番号</label></dt>
+                <dd>〒<input id="yourpostalcode" class="control --sm p-postal-code" size="8" maxlength="8" type="text" name="郵便番号">
+                  <div class="contact__postalcodeDesc">
+                    <p>郵便番号を入力いただくと自動的に住所が入力されます。
+                      <br>続きの住所をご入力ください。</p>
+                  </div></dd>
+              </dl>
+              <dl>
+                <dt><label for="youraddress">ご住所<br>リフォーム場所</label></dt>
+                <dd>
+                  <input id="youraddress" class="control --lg p-region p-locality p-street-address p-extended-address" size="45" type="text" name="ご住所リフォーム場所">
+                </dd>
+              </dl>
+              <dl>
+                <dt><label for="yourcontent">お問い合わせ内容<br>及びその他</label></dt>
+                <dd><textarea id="yourcontent" name="お問い合わせ内容及びその他" cols="30" rows="6"></textarea></dd>
+              </dl>
+            </div>
+            <p class="contact__info">本入力フォームおよびメールでご連絡頂きましたお客さまの個人情報につきましては、厳重に管理を行っております。 法令などに基づき正規の手続きによって司法捜査機関による開示要求が行われた場合を除き、第三者に開示もしくは提供することはございません。</p>
+            <div class="contact__buttons">
+              <input type="submit" value="確認">
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <small class="footer__copyright">Copyright &copy; はた楽 All rights reserved.</small>
+    </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
@@ -387,6 +448,7 @@
 
       Vue.createApp(data).mount('#products');
     </script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/init.js"></script>
   </body>
