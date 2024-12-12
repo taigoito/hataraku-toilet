@@ -131,9 +131,9 @@
           </ul>
           <h3 id="cat1" class="products__subheading">トイレリフォーム</h3>
           <ul class="products__list">
-            <li class="products__listItem" v-for="product in products">
+            <li class="products__listItem" v-for="(product, i) in products">
               <div class="products__itemHeader">
-                <h4 class="products__itemName">{{product.brand}} | {{product.name}}</h4>
+                <h4 class="products__itemName">{{ product.brand }} | {{ product.name }}</h4>
               </div>
               <div class="products__itemBody">
                 <div class="products__itemDesc">
@@ -155,16 +155,16 @@
                     <div class="products__priceNum2">.{{ product.priceNum2 }}</div>
                     <div class="products__priceUnit"><span>(税込)</span><br><span>万円</span></div>
                   </div>
-                  <a class="products__button" href="#">この商品を詳しく見る</a>
+                  <a class="products__button" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>
                 </div>
               </div>
             </li>
           </ul>
           <h3 id="cat2" class="products__subheading">ウォッシュレット</h3>
           <ul class="products__list">
-            <li class="products__listItem" v-for="product in products">
+            <li class="products__listItem" v-for="(product, i) in products">
               <div class="products__itemHeader">
-                <h4 class="products__itemName">{{product.brand}} | {{product.name}}</h4>
+                <h4 class="products__itemName">{{ product.brand }} | {{ product.name }}</h4>
               </div>
               <div class="products__itemBody">
                 <div class="products__itemDesc">
@@ -186,7 +186,7 @@
                     <div class="products__priceNum2">.{{ product.priceNum2 }}</div>
                     <div class="products__priceUnit"><span>(税込)</span><br><span>万円</span></div>
                   </div>
-                  <a class="products__button" href="#">この商品を詳しく見る</a>
+                  <a class="products__button" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>
                 </div>
               </div>
             </li>
@@ -378,76 +378,16 @@
     <footer class="footer">
       <small class="footer__copyright">Copyright &copy; はた楽 All rights reserved.</small>
     </footer>
+    <div class="mobileButtons">
+      <ul class="mobileButtons__inner">
+        <li class="mobileButtons__buttonWrap"><a class="mobileButtons__button --line" href="#"></a></li>
+        <li class="mobileButtons__buttonWrap"><a class="mobileButtons__button --mitsumori" href="#"></a></li>
+        <li class="mobileButtons__buttonWrap"><a class="mobileButtons__button --raiten" href="#"></a></li>
+        <li class="mobileButtons__buttonWrap"><a class="mobileButtons__button --tel" href="#"></a></li>
+      </ul>
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-      const data = {
-        data() {
-          return {
-            products: [
-              {
-                brand: 'LIXIL',
-                name: '商品名が入ります',
-                image: './assets/images/01WC.png',
-                feature: [
-                  'ハイパーキラミック',
-                  '暖房便座',
-                  'フチレス'
-                ],
-                offPrice: '30%OFF',
-                defaultPrice: '99,000円',
-                priceNum1: '9',
-                priceNum2: '9'
-              },
-              {
-                brand: 'LIXIL',
-                name: '商品名が入ります',
-                image: './assets/images/01WC.png',
-                feature: [
-                  'ハイパーキラミック',
-                  '暖房便座',
-                  'フチレス'
-                ],
-                offPrice: '30%OFF',
-                defaultPrice: '99,000円',
-                priceNum1: '9',
-                priceNum2: '9'
-              },
-              {
-                brand: 'LIXIL',
-                name: '商品名が入ります',
-                image: './assets/images/01WC.png',
-                feature: [
-                  'ハイパーキラミック',
-                  '暖房便座',
-                  'フチレス'
-                ],
-                offPrice: '30%OFF',
-                defaultPrice: '99,000円',
-                priceNum1: '9',
-                priceNum2: '9'
-              },
-              {
-                brand: 'LIXIL',
-                name: '商品名が入ります',
-                image: './assets/images/01WC.png',
-                feature: [
-                  'ハイパーキラミック',
-                  '暖房便座',
-                  'フチレス'
-                ],
-                offPrice: '30%OFF',
-                defaultPrice: '99,000円',
-                priceNum1: '9',
-                priceNum2: '9'
-              }
-            ]
-          }
-        }
-      }
-
-      Vue.createApp(data).mount('#products');
-    </script>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
     <script src="./js/drawerMenu.js"></script>
     <script src="./js/evilIcons.js"></script>
