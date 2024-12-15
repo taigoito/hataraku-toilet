@@ -4,6 +4,14 @@
  * Location: Fukui, Japan
  */
 
+const pageId = document.body.id;
+//let url = './assets/products/data.csv';
+
+// #で表示商品を切り替え
+if (pageId != 'lpTop') {
+  //url = '../assets/products/data.csv';
+  window.addEventListener('hashchange', () => location.reload());
+}
 const data = {
   data() {
     return {
@@ -20,7 +28,7 @@ const data = {
             "feature1": "ハイパーキラミック",
             "feature2": "暖房便座",
             "feature3": "フチレス",
-            "recommend": "値段重視",
+            "recommend": "とにかくお値段重視という方に！",
             "spec11": "普通便座",
             "spec12": "-",
             "spec13": "-",
@@ -51,7 +59,7 @@ const data = {
             "feature1": "CS371|aaa",
             "feature2": "CS371|bbb",
             "feature3": "CS371|ccc",
-            "recommend": "値段重視",
+            "recommend": "とにかくお値段重視という方に！",
             "spec11": "CS371|スペックAAA",
             "spec12": "CS371|スペックBBB",
             "spec13": "CS371|スペックCCC",
@@ -82,7 +90,7 @@ const data = {
             "feature1": "CS372|aaa",
             "feature2": "CS372|bbb",
             "feature3": "CS372|ccc",
-            "recommend": "性能重視",
+            "recommend": "とにかく性能重視という方に！",
             "spec11": "CS372|スペックAAA",
             "spec12": "CS372|スペックBBB",
             "spec13": "CS372|スペックCCC",
@@ -113,7 +121,7 @@ const data = {
             "feature1": "CS373|aaa",
             "feature2": "CS373|bbb",
             "feature3": "CS373|ccc",
-            "recommend": "性能重視",
+            "recommend": "とにかく性能重視という方に！",
             "spec11": "CS373|スペックAAA",
             "spec12": "CS373|スペックBBB",
             "spec13": "CS373|スペックCCC",
@@ -144,7 +152,7 @@ const data = {
             "feature1": "WS374|aaa",
             "feature2": "WS374|bbb",
             "feature3": "WS374|ccc",
-            "recommend": "値段重視",
+            "recommend": "とにかくお値段重視という方に！",
             "spec11": "WS374|スペックAAA",
             "spec12": "WS374|スペックBBB",
             "spec13": "WS374|スペックCCC",
@@ -175,7 +183,7 @@ const data = {
             "feature1": "WS375|aaa",
             "feature2": "WS375|bbb",
             "feature3": "WS375|ccc",
-            "recommend": "値段重視",
+            "recommend": "とにかくお値段重視という方に！",
             "spec11": "WS375|スペックAAA",
             "spec12": "WS375|スペックBBB",
             "spec13": "WS375|スペックCCC",
@@ -206,7 +214,7 @@ const data = {
             "feature1": "WS376|aaa",
             "feature2": "WS376|bbb",
             "feature3": "WS376|ccc",
-            "recommend": "性能重視",
+            "recommend": "とにかく性能重視という方に！",
             "spec11": "WS376|スペックAAA",
             "spec12": "WS376|スペックBBB",
             "spec13": "WS376|スペックCCC",
@@ -237,7 +245,7 @@ const data = {
             "feature1": "WS377|aaa",
             "feature2": "WS377|bbb",
             "feature3": "WS377|ccc",
-            "recommend": "性能重視",
+            "recommend": "とにかく性能重視という方に！",
             "spec11": "WS377|スペックAAA",
             "spec12": "WS377|スペックBBB",
             "spec13": "WS377|スペックCCC",
@@ -281,7 +289,7 @@ const data = {
     });
 
     // カテゴリー分け
-    if (document.body.id == 'lpTop') {
+    if (pageId == 'lpTop') {
       this.products.cat1 = []
       this.products.cat2 = [];
       this.products.forEach((product) => {
@@ -291,7 +299,7 @@ const data = {
     }
 
     // トップ/サブで出力切り替え
-    if (document.body.id != 'lpTop') {
+    if (pageId != 'lpTop') {
       const id = location.hash.slice(1);
       if (id && !isNaN(id) && id <= this.products.length) {
         this.product = this.products[id - 1];
@@ -302,7 +310,7 @@ const data = {
   }
 }
 
-if (document.body.id == 'lpTop') {
+if (pageId == 'lpTop') {
   Vue.createApp(data).mount('#products');
 } else {
   Vue.createApp(data).mount('#product');

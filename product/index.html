@@ -56,6 +56,60 @@
           </div>
         </div>
       </header>
+      <section class="productRecommended">
+        <div class="productRecommended__inner">
+          <h2 class="productRecommended__heading">おすすめポイント</h2>
+          <div class="productRecommended__content">
+            <figure class="productRecommended__image">
+              <img src="../assets/images/man.png">
+            </figure>
+            <ul class="productRecommended__list">
+              <li class="productRecommended__listItem" v-html="product.recommend"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="productFeature">
+        <div class="productFeature__inner">
+          <h2 class="productFeature__heading">機能の特徴はこれ！</h2>
+          <div class="productFeature__tableWrap">
+            <table class="productFeature__table">
+              <thead>
+                <tr>
+                  <th>便座性能</th>
+                  <th>節水機能</th>
+                  <th>清掃機能</th>
+                  <th>清潔機能</th>
+                  <th>快適機能</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td v-html="product.spec11"></td>
+                  <td v-html="product.spec21"></td>
+                  <td v-html="product.spec31"></td>
+                  <td v-html="product.spec41"></td>
+                  <td v-html="product.spec51"></td>
+                </tr>
+                <tr>
+                  <td v-html="product.spec12"></td>
+                  <td v-html="product.spec22"></td>
+                  <td v-html="product.spec32"></td>
+                  <td v-html="product.spec42"></td>
+                  <td v-html="product.spec52"></td>
+                </tr>
+                <tr>
+                  <td v-html="product.spec13"></td>
+                  <td v-html="product.spec23"></td>
+                  <td v-html="product.spec33"></td>
+                  <td v-html="product.spec43"></td>
+                  <td v-html="product.spec53"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
       <section class="faq">
         <div class="faq__inner">
           <h2 class="faq__heading">よくある質問</h2>
