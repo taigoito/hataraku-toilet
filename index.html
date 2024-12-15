@@ -131,28 +131,30 @@
           </ul>
           <h3 id="cat1" class="products__subheading">トイレリフォーム</h3>
           <ul class="products__list">
-            <li class="products__listItem" v-for="(product, i) in products">
+            <li class="products__listItem" v-for="(product, i) in products.cat1">
               <div class="products__itemHeader">
-                <h4 class="products__itemName">{{ product.brand }} | {{ product.name }}</h4>
+                <h4 class="products__itemName" v-html="product.title"></h4>
               </div>
               <div class="products__itemBody">
                 <div class="products__itemDesc">
-                  <img class="products__itemImage" :src="product.image">
+                  <img class="products__itemImage" :src="`./assets/products/${product.image}`">
                   <h5 class="products__contentHeadline --feature">機能・仕様</h5>
                   <ul class="products__featureList">
-                    <li class="products__featureListItem" v-for="feature in product.feature">{{ feature }}</li>
+                    <li class="products__featureListItem" v-if="product.feature1 != '-'" v-html="product.feature1"></li>
+                    <li class="products__featureListItem" v-if="product.feature2 != '-'" v-html="product.feature2"></li>
+                    <li class="products__featureListItem" v-if="product.feature3 != '-'" v-html="product.feature3"></li>
                   </ul>
                 </div>
                 <div class="products__itemPrice">
                   <h5 class="products__contentHeadline --price">割引率</h5>
                   <table class="products__priceTable">
-                    <tr><td>本体価格より</td><td class="products__itemOffPrice">{{ product.offPrice }}</td></tr>
-                    <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice">{{ product.defaultPrice }}</td></tr>
+                    <tr><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
+                    <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice" v-html="product.price"></td></tr>
                   </table>
                   <img class="products__comicomikakaku" src="./assets/images/comicomikakaku_sm.png">
                   <div class="products__price">
-                    <div class="products__priceNum1">{{ product.priceNum1 }}</div>
-                    <div class="products__priceNum2">.{{ product.priceNum2 }}</div>
+                    <div class="products__priceNum1" v-html="product.totalPrice1"></div>
+                    <div class="products__priceNum2" v-html="product.totalPrice2"></div>
                     <div class="products__priceUnit"><span>(税込)</span><br><span>万円</span></div>
                   </div>
                   <a class="products__button" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>
@@ -162,28 +164,30 @@
           </ul>
           <h3 id="cat2" class="products__subheading">ウォッシュレット</h3>
           <ul class="products__list">
-            <li class="products__listItem" v-for="(product, i) in products">
+            <li class="products__listItem" v-for="(product, i) in products.cat2">
               <div class="products__itemHeader">
-                <h4 class="products__itemName">{{ product.brand }} | {{ product.name }}</h4>
+                <h4 class="products__itemName" v-html="product.title"></h4>
               </div>
               <div class="products__itemBody">
                 <div class="products__itemDesc">
-                  <img class="products__itemImage" :src="product.image">
+                  <img class="products__itemImage" :src="`./assets/products/${product.image}`">
                   <h5 class="products__contentHeadline --feature">機能・仕様</h5>
                   <ul class="products__featureList">
-                    <li class="products__featureListItem" v-for="feature in product.feature">{{ feature }}</li>
+                    <li class="products__featureListItem" v-if="product.feature1 != '-'" v-html="product.feature1"></li>
+                    <li class="products__featureListItem" v-if="product.feature2 != '-'" v-html="product.feature2"></li>
+                    <li class="products__featureListItem" v-if="product.feature3 != '-'" v-html="product.feature3"></li>
                   </ul>
                 </div>
                 <div class="products__itemPrice">
                   <h5 class="products__contentHeadline --price">割引率</h5>
                   <table class="products__priceTable">
-                    <tr><td>本体価格より</td><td class="products__itemOffPrice">{{ product.offPrice }}</td></tr>
-                    <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice">{{ product.defaultPrice }}</td></tr>
+                    <tr><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
+                    <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice" v-html="product.price"></td></tr>
                   </table>
                   <img class="products__comicomikakaku" src="./assets/images/comicomikakaku_sm.png">
                   <div class="products__price">
-                    <div class="products__priceNum1">{{ product.priceNum1 }}</div>
-                    <div class="products__priceNum2">.{{ product.priceNum2 }}</div>
+                    <div class="products__priceNum1" v-html="product.totalPrice1"></div>
+                    <div class="products__priceNum2" v-html="product.totalPrice2"></div>
                     <div class="products__priceUnit"><span>(税込)</span><br><span>万円</span></div>
                   </div>
                   <a class="products__button" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>

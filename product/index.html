@@ -40,17 +40,17 @@
     <main id="product" class="main">
       <header class="pageHeader">
         <div class="pageHeader__inner">
-          <h1 class="pageHeader__productName">{{ product.brand }} | {{ product.name }}</h1>
+          <h1 class="pageHeader__productName" v-html="product.title"></h1>
           <div class="pageHeader__container">
             <figure class="pageHeader__image">
-              <img :src="`.${product.image}`">
+              <img :src="`../assets/products/${product.image}`">
             </figure>
             <div class="pageHeader__content">
               <img class="pageHeader__comicomikakaku" src="../assets/images/comicomikakaku_sm.png">
               <div class="pageHeader__price">
-                <div class="pageHeader__priceNum1">{{ product.priceNum1 }}</div>
-                <div class="pageHeader__priceNum2">.{{ product.priceNum2 }}</div>
-                <div class="pageHeader__priceUnit"><span>(税込)</span><br><span>万円</span></div>
+                <div class="products__priceNum1" v-html="product.totalPrice1"></div>
+                <div class="products__priceNum2" v-html="product.totalPrice2"></div>
+                <div class="products__priceUnit"><span>(税込)</span><br><span>万円</span></div>
               </div>
             </div>
           </div>
