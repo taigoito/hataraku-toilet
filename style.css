@@ -520,7 +520,7 @@ button, input, select, textarea {
 .slider {
   position: relative;
   width: 100%;
-  height: calc(83.33vmin * 0.6666666667);
+  height: calc(83.33vmin * 0.875);
   overflow: hidden;
 }
 @media (min-width: 750px) {
@@ -552,7 +552,7 @@ button, input, select, textarea {
 }
 .slider__item img {
   width: 83.33vmin;
-  aspect-ratio: 1.5;
+  aspect-ratio: 1.1428571429;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
