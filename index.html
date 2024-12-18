@@ -190,7 +190,7 @@
                     <div class="products__priceNum2" v-html="product.totalPrice2"></div>
                     <div class="products__priceUnit"><span>(税込)</span><br><span>万円</span></div>
                   </div>
-                  <a class="products__button" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>
+                  <!--<a class="products__button" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>-->
                 </div>
               </div>
             </li>
@@ -389,9 +389,6 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-    <script src="./js/drawerMenu.js"></script>
-    <script src="./js/evilIcons.js"></script>
-    <script src="./js/slider.js"></script>
-    <script src="./js/init.js"></script>
+    <script src="./js/init.js" type="module"></script>
   </body>
 </html>

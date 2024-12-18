@@ -317,13 +317,13 @@ if (pageId == 'lpTop') {
 }
 
 // Drawer Menu
-//import DrawerMenu from './drawerMenu.js';
+import DrawerMenu from './_drawerMenu.js';
 new DrawerMenu();
 
 // Evil Icons
-//import EvilIcons from './evilIcons.js';
+import EvilIcons from './_evilIcons.js';
 new EvilIcons();
 
 // Slider
-//import Slider from './slider.js';
+import Slider from './_slider.js';
 new Slider();
