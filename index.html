@@ -148,7 +148,7 @@
                 <div class="products__itemPrice">
                   <h5 class="products__contentHeadline --price">割引率</h5>
                   <table class="products__priceTable">
-                    <tr><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
+                    <tr v-if="product.discount != '?'"><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
                     <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice" v-html="product.price"></td></tr>
                   </table>
                   <img class="products__comicomikakaku" src="./assets/images/comicomikakaku_sm.png">
@@ -181,7 +181,7 @@
                 <div class="products__itemPrice">
                   <h5 class="products__contentHeadline --price">割引率</h5>
                   <table class="products__priceTable">
-                    <tr><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
+                    <tr v-if="product.discount != '?'"><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
                     <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice" v-html="product.price"></td></tr>
                   </table>
                   <img class="products__comicomikakaku" src="./assets/images/comicomikakaku_sm.png">
