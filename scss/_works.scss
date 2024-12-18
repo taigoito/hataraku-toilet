@@ -76,11 +76,17 @@
 
   &__caseImage {
     display: block;
-    flex: 0 1 12rem;
+    flex: 0 1 12rem; // 12remを基準に縮小のみ
+
+    img {
+      width: 100%;
+      height: fit-content;
+      aspect-ratio: 3 / 4;
+    }
   }
 
   &__caseContent {
-    flex: 0 1 auto;
+    flex: 1 0 12rem; // 12remを基準に伸長のみ
   }
 
   &__caseDate {

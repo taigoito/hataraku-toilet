@@ -964,8 +964,14 @@ button, input, select, textarea {
   display: block;
   flex: 0 1 12rem;
 }
+.works__caseImage img {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  aspect-ratio: 3/4;
+}
 .works__caseContent {
-  flex: 0 1 auto;
+  flex: 1 0 12rem;
 }
 .works__caseDate {
   margin-bottom: 0.375rem;
