@@ -11,6 +11,7 @@ $breakpointLg:   900px;
 $sliderAspectRatioSm:  2 / 3;
 $sliderAspectRatioMd:  7 / 8;
 $sliderHeights:        (
-  sm:                    30rem, // feature
+  sm:                    36rem, // feature
   md:                    18rem  // review
-) !default;
+);
+$sliderCaptionHeight:  9rem;

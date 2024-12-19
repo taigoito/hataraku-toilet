@@ -16,7 +16,7 @@ export default class Slider {
     if (!this._items.length) return;
 
     // 各オプション (data属性から取得)
-    this.isHeader = this._elem.dataset.isHeader || false; // headerに設置する場合はドラグ、ホイール操作に対応しない
+    this.isHeader = this._elem.dataset.isHeader || false; // headerに設置する場合はホイール操作に対応しない
     this.aspectRatio = this._elem.dataset.aspectRatio || 5 / 8;
     this.gap = this._elem.dataset.gap - 0 || 0; // アイテム間隔(px)
     this.interval = this._elem.dataset.interval || 3000; // 1000未満を指定すると自動再生しない
@@ -148,22 +148,24 @@ export default class Slider {
   // ナビゲーション(.slider__prev, .slider__next, .slider__nav)を設置
   _setupNavs() {
     // .slider__prev
-    this._prev = document.createElement('a');
+    this._prev = document.querySelector('.slider__prev');
+    /*this._prev = document.createElement('a');
     this._prev.classList.add('slider__prev');
     this._prev.setAttribute('href', '#');
     const prevIcon = document.createElement('span');
     prevIcon.dataset.icon = 'ei-chevron-left';
     prevIcon.dataset.size = 'l';
-    this._prev.appendChild(prevIcon);
+    this._prev.appendChild(prevIcon);*/
 
     // .slider__next
-    this._next = document.createElement('a');
+    this._next = document.querySelector('.slider__next');
+    /*this._next = document.createElement('a');
     this._next.classList.add('slider__next');
     this._next.setAttribute('href', '#');
     const nextIcon = document.createElement('span');
     nextIcon.dataset.icon = 'ei-chevron-right';
     nextIcon.dataset.size = 'l';
-    this._next.appendChild(nextIcon);
+    this._next.appendChild(nextIcon);*/
 
     // .slider__nav
     this._nav = document.createElement('ul');
@@ -177,8 +179,8 @@ export default class Slider {
       this._nav.appendChild(li);
     }
 
-    this._elem.appendChild(this._prev);
-    this._elem.appendChild(this._next);
+    //this._elem.appendChild(this._prev);
+    //this._elem.appendChild(this._next);
     this._elem.after(this._nav);
 
   }
@@ -223,61 +225,61 @@ export default class Slider {
     this._isDragging = false;
     this._delta = 0;
 
-    // ドラグおよびホイール操作
-    if (!this.isHeader) {
-      if (touchSupported) {
-        this._inner.addEventListener('touchstart', (event) => {
-          this._x = event.touches[0].clientX;
-          this._y = event.touches[0].clientY;
-          this._isDragging = true;
-          this._myStartHandler();
-        });
-
-        this._inner.addEventListener('touchmove', (event) => {
-          this._x = event.touches[0].clientX;
-          this._y = event.touches[0].clientY;
-          this._myMoveHandler();
-        });
-
-        this._inner.addEventListener('touchend', () => {
-          this._myEndHandler();
-          this._isDragging = false;
-        });
-
-        // touchcancelは、myEnd扱い
-        this._inner.addEventListener('touchcancel', () => {
-          this._myEndHandler();
-          this._isDragging = false;
-        });
-      }
-
-      this._inner.addEventListener('mousedown', (event) => {
-        this._x = event.clientX;
-        this._y = event.clientY;
+    // ドラグ操作
+    if (touchSupported) {
+      this._inner.addEventListener('touchstart', (event) => {
+        this._x = event.touches[0].clientX;
+        this._y = event.touches[0].clientY;
         this._isDragging = true;
         this._myStartHandler();
-        event.preventDefault();
       });
 
-      this._inner.addEventListener('mousemove', (event) => {
-        this._x = event.clientX;
-        this._y = event.clientY;
+      this._inner.addEventListener('touchmove', (event) => {
+        this._x = event.touches[0].clientX;
+        this._y = event.touches[0].clientY;
         this._myMoveHandler();
-        event.preventDefault();
       });
 
-      this._inner.addEventListener('mouseup', () => {
+      this._inner.addEventListener('touchend', () => {
         this._myEndHandler();
         this._isDragging = false;
       });
 
-      // ポインターが外れたときは、myEnd扱い
-      this._inner.addEventListener('mouseleave', () => {
+      // touchcancelは、myEnd扱い
+      this._inner.addEventListener('touchcancel', () => {
         this._myEndHandler();
         this._isDragging = false;
       });
+    }
 
-      // ホイール操作
+    this._inner.addEventListener('mousedown', (event) => {
+      this._x = event.clientX;
+      this._y = event.clientY;
+      this._isDragging = true;
+      this._myStartHandler();
+      event.preventDefault();
+    });
+
+    this._inner.addEventListener('mousemove', (event) => {
+      this._x = event.clientX;
+      this._y = event.clientY;
+      this._myMoveHandler();
+      event.preventDefault();
+    });
+
+    this._inner.addEventListener('mouseup', () => {
+      this._myEndHandler();
+      this._isDragging = false;
+    });
+
+    // ポインターが外れたときは、myEnd扱い
+    this._inner.addEventListener('mouseleave', () => {
+      this._myEndHandler();
+      this._isDragging = false;
+    });
+
+    // ホイール操作
+    if (!this.isHeader) {
       this._inner.addEventListener('wheel', (event) => {
         this._delta = event.deltaY;
         this._myWheelHandler();

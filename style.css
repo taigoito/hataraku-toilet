@@ -525,14 +525,14 @@ button, input, select, textarea {
   overflow: hidden;
 }
 .slider.--sm {
-  height: calc(83.33vmin * 0.6666666667);
+  height: calc(83.33vmin * 0.6666666667 + 9rem);
 }
 .slider.--md {
   height: calc(83.33vmin * 0.875);
 }
 @media (min-width: 750px) {
   .slider.--sm {
-    height: 30rem;
+    height: 36rem;
   }
   .slider.--md {
     height: 18rem;
@@ -567,29 +567,28 @@ button, input, select, textarea {
   aspect-ratio: 1.1428571429;
 }
 @media (min-width: 750px) {
-  .slider.--sm .slider__item img {
+  .--sm .slider__item img {
     width: auto;
-    height: 30rem;
+    height: 27rem;
   }
-  .slider.--md .slider__item img {
+  .--md .slider__item img {
     width: auto;
     height: 18rem;
   }
 }
 .slider__caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  color: #fff;
-  font-size: 1.5rem;
+  display: block;
+  width: 18rem;
+  margin: 0 auto;
   text-align: center;
 }
-.slider__caption a {
-  display: block;
-  color: #fff;
+.slider__caption h4, .slider__caption p {
+  margin: 0.75rem 0;
+}
+@media (min-width: 750px) {
+  .slider__caption {
+    width: 30rem;
+  }
 }
 .slider__prev, .slider__next {
   position: absolute;
@@ -1510,8 +1509,8 @@ button, input, select, textarea {
 }
 .productFeature__sliderWrap {
   position: relative;
-  width: 100%;
-  margin-top: 3rem;
+  width: min(100%, 54rem);
+  margin: 3rem auto 0;
   border: 1px solid #d7d7d7;
   overflow: hidden;
 }

@@ -56,8 +56,8 @@
 
   &__sliderWrap {
     position: relative;
-    width: 100%;
-    margin-top: 3rem;
+    width: min(100%, 54rem);
+    margin: 3rem auto 0;
     border: 1px solid #d7d7d7;
     overflow: hidden;
 

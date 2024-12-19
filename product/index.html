@@ -111,14 +111,72 @@
           <div class="productFeature__sliderWrap">
             <h3>画像を横にスクロールして、機能が見られます</h3>
             <div class="productFeature__sliderContainer">
-              <div class="slider --sm" data-aspect-ratio="0.667" data-gap="120">
+              <div class="slider --sm" data-is-header="true" data-aspect-ratio="0.667" data-gap="180" data-interval="0">
                 <figure class="slider__inner">
                   <template v-for="slide, i in product.slide">
                     <figure v-if="slide" class="slider__item">
                       <img class="slider__image" :src="`../assets/feature/feature${i + 1}.jpg`">
+                      <figcaption class="slider__caption" v-if="i == 0">
+                        <h4>【セフィオンテクト】</h4>
+                        <p>汚れが付きにくく、汚れがついても落としやすい、TOTO独自の素材です。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 1">
+                        <h4>【フチなし形状】</h4>
+                        <p>LIXILの便器は、フチの無いお掃除簡単なものが多いです。溝が無いから一拭きするだけでお掃除簡単！</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 2">
+                        <h4>【オート洗浄】</h4>
+                        <p>立ち上がると自動で洗浄が開始します。流し忘れが無くなり、きれいなトイレを保つことができます。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 3">
+                        <h4>【激落ちバブル】</h4>
+                        <p>市販の台所用洗剤を使用して、細やかな泡で便器内を自動で洗浄してくれます。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 4">
+                        <h4>【スゴピカ素材】</h4>
+                        <p style="font-size: 80%;">スゴピカ素材は有機ガラス系の素材で作られています。有機ガラス系はぬめりや黒ずみの原因となる水垢を作りにくいため、汚れがたまりにくく、常にキレイな状態を保つ事ができます。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 5">
+                        <h4>【ステンレスノズル】</h4>
+                        <p>内部で洗浄口が変わる仕組みで、ステンレスでできているから汚れも落ちやすく、お掃除が簡単なのも特徴です。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 6">
+                        <h4>【鉢内除菌】</h4>
+                        <p>プラズマクラスターイオンを便器内に発生させ、手の届かない場所もしっかり除菌することができます。清潔に使える機能が欲しい方にはおすすめです。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 7">
+                        <h4>【ノズル除菌】</h4>
+                        <p>使用後に銀イオンで洗浄します。洗うだけでなく、除菌もできる水で洗うことにより、より清潔にお使い頂くことができます。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 8">
+                        <h4>【リフトアップ】</h4>
+                        <p>結構大変なのが、便器と便座の間のスキマ掃除。持ち上げることができるタイプだから、手の届かない所もさっと一拭きでお掃除できます。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 9">
+                        <h4>【壁リモコン】</h4>
+                        <p>イメージ写真ですが、お選びになる便座によって変わります。操作部が壁についているタイプです。操作しやすいのが特徴です。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 10">
+                        <h4>【ノズルきれい】</h4>
+                        <p>きれい除菌水という独自の洗浄水で、ノズルを内側外側から自動で洗浄してくれます。清潔にいつでも使用できる機能です。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 11">
+                        <h4>【便器きれい】</h4>
+                        <p style="font-size: 80%;">使用前に自動で便座に霧吹きします。これで汚れが付きにくくなり、お掃除手間を大幅に解消してくれるスグレモノです。更に、水にもこだわり除菌水を散布することで菌の増殖を防ぎ、清潔さもキープできるんです。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 12">
+                        <h4>【継ぎ目なし】</h4>
+                        <p>便座の継ぎ目があるとその隙間の掃除が大変ですが、この便座は継ぎ目が無く一拭きで掃除ができます。</p>
+                      </figcaption>
+                      <figcaption class="slider__caption" v-if="i == 13">
+                        <h4>【オート開閉・洗浄】</h4>
+                        <p>近づくと自動でフタが開閉します。消し忘れが無くなるのはもちろん、手を汚さずトイレを使用できます。</p>
+                      </figcaption>
                     </figure>
                   </template>
                 </figure>
+                <a class="slider__prev" href="#"><span data-icon="ei-chevron-left" data-size="l"></span></a>
+                <a class="slider__next" href="#"><span data-icon="ei-chevron-right" data-size="l"></span></a>
               </div>
             </div>
           </div>
