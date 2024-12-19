@@ -43,7 +43,7 @@ const data = {
         if (product.price - 0 && !isNaN(product.price) && 
           product.salePrice - 0 && !isNaN(product.salePrice)) {
           product.discount = Math.round((1 - product.salePrice / product.price) * 100);
-          product.price = (product.price - 0).toLocaleString();
+          product.price = `${(product.price - 0).toLocaleString()}円`;
         } else {
           product.discount = '?';
           product.price = 'オープン価格';

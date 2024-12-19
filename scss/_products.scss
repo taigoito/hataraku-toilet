@@ -168,6 +168,12 @@
     color: #d80000;
   }
 
+  &__zubari {
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
+  }
+
   &__comicomikakaku {
     display: block;
     width: clamp(10.5rem, 87.5%, 13.5rem);

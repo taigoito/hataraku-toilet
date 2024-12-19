@@ -155,6 +155,7 @@
                     <tr v-if="product.discount != '?'"><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
                     <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice" v-html="product.price"></td></tr>
                   </table>
+                  <img class="products__zubari" src="./assets/images/zubari.png" v-if="product.discount == '?'">
                   <img class="products__comicomikakaku" src="./assets/images/comicomikakaku_sm.png">
                   <div class="products__price">
                     <div class="products__priceNum1" v-html="product.totalPrice1"></div>
@@ -188,6 +189,7 @@
                     <tr v-if="product.discount != '?'"><td>本体価格より</td><td class="products__itemOffPrice" v-html="`${product.discount}%OFF`"></td></tr>
                     <tr><td>メーカー希望小売価格</td><td class="products__itemDefaultPrice" v-html="product.price"></td></tr>
                   </table>
+                  <img class="products__zubari" src="./assets/images/zubari.png" v-if="product.discount == '?'">
                   <img class="products__comicomikakaku" src="./assets/images/comicomikakaku_sm.png">
                   <div class="products__price">
                     <div class="products__priceNum1" v-html="product.totalPrice1"></div>
