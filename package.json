@@ -1,0 +1,19 @@
+{
+  "name": "hataraku-toilet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taigoito/hataraku-toilet.git"
+  },
+  "author": "Taigo Ito",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/taigoito/hataraku-toilet/issues"
+  },
+  "homepage": "https://github.com/taigoito/hataraku-toilet#readme"
+}
