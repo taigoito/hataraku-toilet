@@ -513,25 +513,29 @@ button, input, select, textarea {
 .review__heading span {
   display: inline-block;
 }
+.review__sliderWrap {
+  position: relative;
+}
 
 /**
  * Component - Slider
  */
 .slider {
-  position: relative;
   width: 100%;
-  height: calc(83.33vmin * 0.875);
   overflow: hidden;
+}
+.slider.--sm {
+  height: calc(83.33vmin * 0.6666666667);
+}
+.slider.--md {
+  height: calc(83.33vmin * 0.875);
 }
 @media (min-width: 750px) {
   .slider.--sm {
-    height: 12rem;
+    height: 30rem;
   }
   .slider.--md {
     height: 18rem;
-  }
-  .slider.--lg {
-    height: 24rem;
   }
 }
 .slider__inner {
@@ -552,23 +556,24 @@ button, input, select, textarea {
 }
 .slider__item img {
   width: 83.33vmin;
-  aspect-ratio: 1.1428571429;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
 }
+.--sm .slider__item img {
+  aspect-ratio: 1.5;
+}
+.--md .slider__item img {
+  aspect-ratio: 1.1428571429;
+}
 @media (min-width: 750px) {
   .slider.--sm .slider__item img {
     width: auto;
-    height: 12rem;
+    height: 30rem;
   }
   .slider.--md .slider__item img {
     width: auto;
     height: 18rem;
-  }
-  .slider.--lg .slider__item img {
-    width: auto;
-    height: 24rem;
   }
 }
 .slider__caption {
@@ -623,7 +628,10 @@ button, input, select, textarea {
   background-color: #8890b9;
   cursor: pointer;
 }
-.slider__navItem:not(.--current) {
+.productFeature .slider__navItem:not(.--current) {
+  background-color: #c6c6c6;
+}
+.review .slider__navItem:not(.--current) {
   background-color: #fff;
 }
 
@@ -1499,4 +1507,22 @@ button, input, select, textarea {
 .productFeature__table th {
   background-color: #e2f5fc;
   color: #7c7c7c;
+}
+.productFeature__sliderWrap {
+  position: relative;
+  width: 100%;
+  margin-top: 3rem;
+  border: 1px solid #d7d7d7;
+  overflow: hidden;
+}
+.productFeature__sliderWrap h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: #d7d7d7;
+  text-align: center;
+}
+.productFeature__sliderContainer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }

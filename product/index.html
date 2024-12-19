@@ -108,6 +108,20 @@
               </tbody>
             </table>
           </div>
+          <div class="productFeature__sliderWrap">
+            <h3>画像を横にスクロールして、機能が見られます</h3>
+            <div class="productFeature__sliderContainer">
+              <div class="slider --sm" data-aspect-ratio="0.667" data-gap="120">
+                <figure class="slider__inner">
+                  <template v-for="slide, i in product.slide">
+                    <figure v-if="slide" class="slider__item">
+                      <img class="slider__image" :src="`../assets/feature/feature${i + 1}.jpg`">
+                    </figure>
+                  </template>
+                </figure>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="faq">

@@ -8,9 +8,9 @@ $breakpointMd:   750px;
 $breakpointLg:   900px;
 
 // Slider
-$sliderAspectRatio:    7 / 8 !default;
+$sliderAspectRatioSm:  2 / 3;
+$sliderAspectRatioMd:  7 / 8;
 $sliderHeights:        (
-  sm:                    12rem,
-  md:                    18rem,
-  lg:                    24rem
+  sm:                    30rem, // feature
+  md:                    18rem  // review
 ) !default;

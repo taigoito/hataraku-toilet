@@ -26,8 +26,13 @@ const data = {
       const props = texts.shift().split(',');
       texts.forEach((text, i) => {
         products[i] = {};
+        products[i]['slide'] = [];
         const values = text.split(',');
         for (let j = 1; j < props.length; j++) {
+          if (props[j].slice(0, 5) == 'slide') {
+            if (values[j] == '○' || values[j] == '〇') products[i]['slide'].push(true);
+            else products[i]['slide'].push(false);
+          }
           products[i][props[j]] = values[j];
         }
       });
@@ -92,4 +97,6 @@ new EvilIcons();
 
 // Slider
 import Slider from './_slider.js';
-new Slider();
+setTimeout(() => {
+  new Slider();
+}, 1000);

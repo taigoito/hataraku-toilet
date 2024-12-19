@@ -3,10 +3,17 @@
  */
 
 .slider {
-  position: relative;
+  //position: relative; wrap要素に適用
   width: 100%;
-  height: calc(83.33vmin * #{$sliderAspectRatio});
   overflow: hidden;
+  
+  &.--sm {
+    height: calc(83.33vmin * #{$sliderAspectRatioSm});
+  }
+  
+  &.--md {
+    height: calc(83.33vmin * #{$sliderAspectRatioMd});
+  }
 
   @media (min-width: $breakpointMd) {
     @each $key, $height in $sliderHeights {
@@ -40,9 +47,16 @@
 
     img {
       width: 83.33vmin;
-      aspect-ratio: 1 / $sliderAspectRatio;
       object-fit: cover;
       margin: 0;
+
+      .--sm & {
+        aspect-ratio: 1 / $sliderAspectRatioSm;
+      }
+
+      .--md & {
+        aspect-ratio: 1 / $sliderAspectRatioMd;
+      }
 
       @media (min-width: $breakpointMd) {
         @each $key, $height in $sliderHeights {
@@ -114,8 +128,16 @@
     background-color: #8890b9;
     cursor: pointer;
 
-    &:not(.--current) {
-      background-color: #fff;
+    .productFeature & {
+      &:not(.--current) {
+        background-color: #c6c6c6;
+      }
+    }
+
+    .review & {
+      &:not(.--current) {
+        background-color: #fff;
+      }
     }
   }
 }
